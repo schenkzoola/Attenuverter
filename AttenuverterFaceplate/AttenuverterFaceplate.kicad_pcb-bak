@@ -85,9 +85,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "AttenuverterFaceplateGerbers/"))
   )
 
   (net 0 "")
@@ -636,7 +636,7 @@
   (gr_line (start 145.001384 25.75) (end 115.001384 25.75) (layer Edge.Cuts) (width 0.2))
   (gr_line (start 115.001384 154.25) (end 145.001384 154.25) (layer Edge.Cuts) (width 0.2))
 
-  (zone (net 0) (net_name "") (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 0) (net_name "") (layer F.Cu) (tstamp 5DE02D54) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))

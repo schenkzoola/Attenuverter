@@ -1,4 +1,4 @@
-update=11/25/2019 5:54:39 PM
+update=4/17/2020 7:41:49 PM
 version=1
 last_client=kicad
 [general]
@@ -14,7 +14,7 @@ LibDir=
 [eeschema/libraries]
 [schematic_editor]
 version=1
-PageLayoutDescrFile=
+PageLayoutDescrFile=C:/Projects/NTSFootprints/Schenktronics A4.kicad_wks
 PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
@@ -24,7 +24,7 @@ LabSize=50
 ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
-PageLayoutDescrFile=
+PageLayoutDescrFile=C:/Projects/NTSFootprints/Schenktronics A4.kicad_wks
 LastNetListRead=Attenuverter.net
 CopperLayerCount=2
 BoardThickness=1.6
@@ -71,7 +71,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.051
 SolderMaskMinWidth=0.25
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
