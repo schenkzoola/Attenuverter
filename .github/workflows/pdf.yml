@@ -1,0 +1,28 @@
+# Rebuilds the documentation PDFs whenever the docs change, and commits them.
+name: Build PDFs
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "docs/*.md"
+      - "docs/images/**"
+      - "docs/pdf/config.json"
+      - ".github/workflows/pdf.yml"
+  workflow_dispatch: # run by hand after updating schenktronics-docs-tools
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # the "Updated" date comes from git history
+      - uses: schenkzoola/schenktronics-docs-tools/pdf@v1
