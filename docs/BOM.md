@@ -35,7 +35,7 @@ All the resistors, capacitors, diodes, fuses and chips are surface-mount parts o
 
 | Qty | Part | Notes |
 |----:|------|-------|
-| 2 | M3 rack screws | Supplied with most Eurorack cases. |
+| 4 | M3 rack screws | Supplied with most Eurorack cases. Two, in diagonally opposite corners, will hold the module. |
 
 ## Ordering the parts
 

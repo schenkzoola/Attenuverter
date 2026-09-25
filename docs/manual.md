@@ -103,7 +103,7 @@ Channel 3 sets the LFO's depth. In 4 is empty, so Knob 4 gives a steady voltage 
 1. Power off your case.
 2. Connect a 10-pin to 16-pin Eurorack power cable to the header on the back of the module. The red stripe goes to **−12 V**, marked "Red Stripe" and "−12v" on the board. At the bus board end, the red stripe also goes to −12 V, usually marked on the bus.
 3. Place the module in any 6HP space.
-4. Secure it with two M3 rack screws. Do not overtighten them.
+4. Secure it with four M3 rack screws, one in each corner hole. Two screws, in diagonally opposite corners, will hold it if your case is short of screws, but four look neater. Do not overtighten them.
 5. Power on and check that turning a knob with an empty input moves its output between −5 V and +5 V.
 
 The module is protected against a cable plugged in backwards, but don't rely on it. Always check the red stripe before powering on.
