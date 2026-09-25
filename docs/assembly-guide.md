@@ -40,7 +40,7 @@ The capacitors have no markings, so the three values look alike, and resistor ma
 - Flux (a pen or syringe) and solder wick, for fixing bridges
 - A magnifier or loupe, to inspect the surface-mount joints
 - Flush cutters
-- Multimeter with continuity (beep), resistance and DC voltage modes
+- Multimeter with continuity (beep), diode test and DC voltage modes
 - Nut driver or wrench for the jack nuts (optional, but it avoids scratching the panel)
 
 ## Before you start
@@ -94,14 +94,22 @@ Check every joint with a magnifier. Each one should be a smooth fillet from the 
 
 ## Step 3 — Check for shorts
 
-Before adding the rest, check the power rails with a multimeter in resistance mode. No power is needed. Probe the header pins from the front of the board.
+Before adding the rest, check the power rails with a multimeter in diode test mode (the diode symbol). No power is needed. Probe the header pins from the front of the board.
+
+Use diode test mode, not resistance mode. Most meters test resistance at too low a voltage to turn a diode on, so a diode fitted backwards reads as an open circuit in resistance mode and looks fine. Diode test mode uses a higher voltage and shows a diode's forward voltage instead.
 
 | Test | Expected result |
 |------|-----------------|
-| Red probe on pin 9 (+12 V), black on pin 3 (ground) | Not near 0 Ω. The reading may climb for a few seconds while the capacitors charge. |
-| Red probe on pin 3 (ground), black on pin 1 (−12 V) | Not near 0 Ω. The reading may climb for a few seconds. |
+| Red probe on pin 9 (+12 V), black on pin 3 (ground) | OL, or a high reading. It may count up for a moment while the capacitors charge. |
+| Red probe on pin 3 (ground), black on pin 1 (−12 V) | OL, or a high reading. It may count up for a moment. |
+| Red probe on pin 3 (ground), black on pin 9 (+12 V) | About 0.5–0.7 V: D1 conducting. |
+| Red probe on pin 1 (−12 V), black on pin 3 (ground) | About 0.5–0.7 V: D2 conducting. |
 
-A reading near 0 Ω means a short: look for a bridge on U1, or a diode fitted backwards. The probe directions matter, because D1 and D2 conduct the other way round.
+What a wrong reading means:
+
+- **Near 0 V** (many meters also beep) in any test: a short. Look for a solder bridge on U1 or on the power header.
+- **About 0.5–0.7 V in the first or second test:** D1 (first test) or D2 (second test) is fitted backwards. Fitted like that, it would short the rail as soon as you power on.
+- **OL in the third or fourth test:** D1 or D2 is missing, fitted backwards, or not soldered.
 
 ## Step 4 — Fit the pots and jacks
 
@@ -162,7 +170,7 @@ Then patch an LFO or other moving signal into each input in turn, and listen or 
 
 ## Step 9 — Install
 
-Install the module in your case with the included power cable and two M3 screws. The details, and how to use the module, are in the [User Manual](manual.md#installation).
+Install the module in your case with the included power cable and four M3 rack screws (two will do). The details, and how to use the module, are in the [User Manual](manual.md#installation).
 
 ## Troubleshooting
 
