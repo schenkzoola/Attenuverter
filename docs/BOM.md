@@ -4,6 +4,8 @@ A machine-readable copy is in [BOM.csv](BOM.csv). The original spreadsheet is [A
 
 All the resistors, capacitors, diodes, fuses and chips are surface-mount parts on the back of the board. The resistors and capacitors are 0805 size. Parts marked "or equivalent" can be swapped for any part with the same value, package and pinout.
 
+The **Easy Build Kit** includes a PCB with every surface-mount part below already soldered and tested — you only need to source the through-hole parts.
+
 ## Surface-mount parts (back of the board)
 
 | Qty | Reference | Part | Manufacturer / Part No. | Notes |

@@ -2,6 +2,8 @@
 
 This kit has 139 solder joints, 85 of them on surface-mount parts: 0805 resistors and capacitors, and a SOIC-14 chip. It takes about 1½–2 hours if you're experienced with surface-mount soldering, and longer if you're not. If you haven't soldered surface-mount parts before, practice on a scrap board first, or start with a through-hole kit such as the [Passive Attenuator](https://github.com/schenkzoola/Attenuator).
 
+**Building the Easy Build Kit?** Its board arrives with every surface-mount part already soldered and tested, so skip [Step 1](#step-1--solder-the-surface-mount-parts) and start at [Step 2](#step-2--fit-the-power-header). That leaves 54 through-hole joints, about 45–60 minutes, and no surface-mount soldering at all.
+
 **Prefer to watch?** There's a video of the whole build: [Watch me build a surface mount attenuverter!](https://www.youtube.com/watch?v=QJxtZVHBpq0)
 
 <img src="images/pcb-and-panel.jpg" alt="Faceplate and bare PCB, back side up, side by side" width="240">
@@ -10,10 +12,10 @@ This kit has 139 solder joints, 85 of them on surface-mount parts: 0805 resistor
 
 ### Kit contents
 
-Check your kit against this list before you start (full details in the [BOM](BOM.md)):
+Check your kit against this list before you start (full details in the [BOM](BOM.md)).
 
-- [ ] 1 × main PCB
-- [ ] 1 × faceplate
+**Easy Build Kit:** your board already has these soldered on — check they're present and well soldered, don't source loose parts for them:
+
 - [ ] 1 × TL074 quad op-amp (U1, 14 pins)
 - [ ] 1 × LM4040 5 V reference (U2, 3 pins)
 - [ ] 16 × 100 kΩ resistors
@@ -24,20 +26,25 @@ Check your kit against this list before you start (full details in the [BOM](BOM
 - [ ] 2 × 10 µF capacitors
 - [ ] 2 × diodes (D1, D2)
 - [ ] 2 × resettable fuses (F1, F2)
+
+**Every kit**, loose:
+
+- [ ] 1 × main PCB (Easy Build Kit: surface-mount parts above already soldered on)
+- [ ] 1 × faceplate
 - [ ] 1 × 10-pin shrouded power header
 - [ ] 8 × 3.5 mm jacks with nuts
 - [ ] 4 × potentiometers
 - [ ] 4 × knobs
 - [ ] 1 × power cable, 10-pin to 16-pin
 
-The capacitors have no markings, so the three values look alike, and resistor markings vary between makers. Keep each value in its labelled strip or bag until you place it.
+If you're soldering the surface-mount parts yourself, the capacitors have no markings, so the three values look alike, and resistor markings vary between makers. Keep each value in its labelled strip or bag until you place it.
 
 ### Tools
 
 - Soldering iron with a fine tip (about 330–360 °C for leaded solder)
 - Thin solder, 0.5 mm or less
-- Fine tweezers
-- Flux (a pen or syringe) and solder wick, for fixing bridges
+- Fine tweezers (Step 1 only — skip if you have the Easy Build Kit)
+- Flux (a pen or syringe) and solder wick, for fixing bridges (Step 1 only — skip if you have the Easy Build Kit)
 - A magnifier or loupe, to inspect the surface-mount joints
 - Flush cutters
 - Multimeter with continuity (beep), diode test and DC voltage modes
@@ -46,10 +53,12 @@ The capacitors have no markings, so the three values look alike, and resistor ma
 ## Before you start
 
 - The board has two sides. The **back** has the small rectangular pads for the surface-mount parts, and is printed "Attenuverter v1.0 / schenktronics.com" and "Red Stripe". The **front** has the outlines for the pots and jacks (RV1–RV4, J1–J9).
-- Build in this order: surface-mount parts, then the power header, then the pots and jacks. Each stage is easier while the next one isn't in the way.
+- Build in this order: surface-mount parts, then the power header, then the pots and jacks. Each stage is easier while the next one isn't in the way. (Easy Build Kit: the surface-mount stage is already done — start at the power header.)
 - **Don't solder the pots or jacks until the faceplate is fitted.** The faceplate holds them in line while you solder.
 
 ## Step 1 — Solder the surface-mount parts
+
+**Easy Build Kit: skip this step.** Your board already has these parts soldered and tested at the factory. Go to [Step 2](#step-2--fit-the-power-header).
 
 All of these go on the back of the board. For every two-pad part, use the same method:
 
@@ -94,7 +103,7 @@ Check every joint with a magnifier. Each one should be a smooth fillet from the 
 
 ## Step 3 — Check for shorts
 
-Before adding the rest, check the power rails with a multimeter in diode test mode (the diode symbol). No power is needed. Probe the header pins from the front of the board.
+Before adding the rest, check the power rails with a multimeter in diode test mode (the diode symbol). No power is needed. Probe the header pins from the front of the board. Worth doing on the Easy Build Kit too: the factory tested the surface-mount side, but you've just soldered the header yourself.
 
 Use diode test mode, not resistance mode. Most meters test resistance at too low a voltage to turn a diode on, so a diode fitted backwards reads as an open circuit in resistance mode and looks fine. Diode test mode uses a higher voltage and shows a diode's forward voltage instead.
 
